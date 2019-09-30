@@ -1,0 +1,10 @@
+version: "3"
+services:
+  aria2:
+    build: .
+    restart: unless-stopped
+    volumes:
+      - ./config:/config
+      - ./download:/downloads
+    ports:
+      - 8089:80
